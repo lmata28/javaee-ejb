@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Cursos</title>
+    </h:head>
+    <h:body>
+        <h1>Cursos</h1>
+
+        <h:form>
+            <p:commandButton value="Nuevo"
+                             action="form.xhtml"/><br/>
+
+            <p:dataTable var="c" value="#{cursoBean.cursos}">
+
+                <p:column headerText="Id" width="10%">
+                    <h:outputText value="#{c.id}" />
+                </p:column>
+
+                <p:column headerText="Nombre"  width="30%">
+                    <h:outputText value="#{c.nombre}" />
+                </p:column>
+
+                <p:column headerText="Código"  width="40%">
+                    <h:outputText value="#{c.codigo}" />
+                </p:column>
+                
+                <p:column headerText="Programa"  width="40%">
+                    <h:outputText value="#{c.programa.nombre}" />
+                </p:column>
+
+                <p:column headerText="Acciones"  width="30%">
+                    <p:commandButton value="Editar"
+                                     action="#{cursoBean.update(c)}"
+                                     update="@form"/>
+
+                    <p:commandButton value="Eliminar"
+                                     actionListener="#{cursoBean.delete(c)}"
+                                     update="@form" />
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>
+

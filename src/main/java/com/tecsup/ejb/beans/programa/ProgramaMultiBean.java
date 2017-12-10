@@ -1,4 +1,4 @@
-package com.tecsup.ejb.beans;
+package com.tecsup.ejb.beans.programa;
 
 import com.tecsup.ejb.dao.ProgramaDAO;
 import com.tecsup.ejb.model.Programa;
@@ -21,7 +21,7 @@ public class ProgramaMultiBean {
     public String update(Programa pro) {
         this.programa = pro;
         
-        return "programaForm.xhtml";
+        return "form.xhtml";
     }
 
     public String save() {
@@ -33,7 +33,7 @@ public class ProgramaMultiBean {
 
         this.programa = new Programa();
         
-        return "programaIndex.xhtml";
+        return "list.xhtml";
     }
 
     public void delete(Programa programa) {

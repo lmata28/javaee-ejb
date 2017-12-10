@@ -1,18 +1,10 @@
 package com.tecsup.ejb.dao;
 
 import com.tecsup.ejb.model.Programa;
-import java.util.List;
+import com.tecsup.ejb.util.GenericDAO;
 
-public interface ProgramaDAO {
+public interface ProgramaDAO extends GenericDAO<Programa> {
 
-    public List<Programa> all();
 
-    public Programa find(Long id);
-
-    public void save(Programa programa);
-
-    public void update(Programa programa);
-
-    public void delete(Programa programa);
 
 }

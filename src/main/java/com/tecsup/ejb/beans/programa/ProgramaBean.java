@@ -1,4 +1,4 @@
-package com.tecsup.ejb.beans;
+package com.tecsup.ejb.beans.programa;
 
 import com.tecsup.ejb.dao.ProgramaDAO;
 import com.tecsup.ejb.model.Programa;
