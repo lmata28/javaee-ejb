@@ -19,18 +19,30 @@
                          value="#{cursoBean.curso.nombre}" />
 
             <br />
+            Código
+            <p:inputText id="codigo"
+                         value="#{cursoBean.curso.codigo}" />
+            <br />
 
-            <!--Programa-->
-<!--            <p:selectOneMenu id="programa" value="#{cursoBean.curso.programa}" converter="#{programaConverter}">
-                <f:selectItems value="#{cursoBean.programas}" 
-                               var="p" itemValue="#{p}" itemLabel="#{p.nombre}"/>                
+            Programa
+            <p:inputText id="programa"
+                         value="#{cursoBean.curso.programa}" converter="#{programaConverter}"/>
+<!--
+            <h:selectOneMenu id="programa" value="#{cursoBean.curso.programa}" converter="#{programaConverter}">
+                <f:selectItem itemValue="#{cursoBean.programas}" itemLabel="#{cursoBean.programas}" /> 
+            </h:selectOneMenu> 
+            <br/>
+
+
+            <p:selectOneMenu id="programa" value="#{cursoBean.curso.programa}" converter="#{programaConverter}">
+                <f:selectItems value="#{cursoBean.programas}" var="p" itemValue="#{p}" itemLabel="#{p.nombre}"/>                
             </p:selectOneMenu>-->
-            
-             <!--<h:messages infoClass="info" errorClass="error" />-->
+
+            <!--<h:messages infoClass="info" errorClass="error" />-->
 
             <br />
 
-            <br /><br />
+            <br />
 
             <p:commandButton value="Registrar"
                              action="#{cursoBean.save}" update="@form"/>

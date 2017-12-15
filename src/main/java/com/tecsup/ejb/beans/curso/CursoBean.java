@@ -18,11 +18,13 @@ public class CursoBean {
 
     @Inject
     ProgramaDAO programaDAO;
+    
 
     private List<Curso> cursos;
 
     private Curso curso = new Curso();
 
+    
     public String update(Curso pro) {
         this.curso = pro;
 
@@ -45,6 +47,7 @@ public class CursoBean {
         cursoDAO.delete(curso);
     }
 
+    
     public List<Programa> getProgramas() {
         return programaDAO.all();
 

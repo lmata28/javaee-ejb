@@ -17,6 +17,7 @@ public class ProgramaMultiBean {
     private List<Programa> programas;
 
     private Programa programa = new Programa();
+    
 
     public String update(Programa pro) {
         this.programa = pro;
@@ -40,6 +41,7 @@ public class ProgramaMultiBean {
         programaDAO.delete(programa);
     }
 
+    
     public List<Programa> getProgramas() {
         programas = programaDAO.all();
         return programas;
